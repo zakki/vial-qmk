@@ -2,7 +2,6 @@
 
 #ifdef RGB_MATRIX_ENABLE
 
-
 led_config_t g_led_config = {
     {
          { 0,  1,  2,  3,  4 , 5,  NO_LED },
