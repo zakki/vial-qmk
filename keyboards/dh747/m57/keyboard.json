@@ -2,7 +2,6 @@
     "keyboard_name": "BCORNE", 
     "maintainer": "MT",
     "manufacturer": "DH747",
-    "bootloader": "custom",
     "url": "https://github.com/foostan/crkbd",
     "usb": {
         "pid": "0x45D4",
@@ -11,6 +10,7 @@
         "polling_interval": 1
     },
     "processor": "STM32F401",
+    "bootloader": "tinyuf2",
     "features": {
         "bootmagic": true,
         "extrakey": true,
