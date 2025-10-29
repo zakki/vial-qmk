@@ -30,7 +30,14 @@ __attribute__((weak)) void mcu_reset(void) {
 }
 
 __attribute__((weak)) void bootloader_jump(void) {
+#if 0
     DBL_TAP_REG = DBL_TAP_MAGIC;
+#else
+    // FIXME: For Plum bootloader stm32f401
+    //https://github.com/HaiMianBBao/PlumBL/blob/34b875e502dd08c01d246e6d31e3437416fdd9cd/readme.md#the-app-interacts-with-the-boot
+    uint32_t *boot_magic = (uint32_t *)0x2000fc00;
+    *boot_magic = 0xc220b134;
+#endif
     NVIC_SystemReset();
 }
 
